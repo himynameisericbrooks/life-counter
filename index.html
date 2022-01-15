@@ -23,8 +23,10 @@
       <button v-on:click="reduce(1)">-1</button>
       <button v-on:click="reduce(5)">-5</button>
       <p>Total: {{ counter }}</p>
-      <input type="text" v-on:input="setName">
-      <p>Name: {{ name }}</p>
+      <input type="text" 
+      v-on:input="setName"
+      v-on:keyup.return="confirmInput">
+      <p>Name: {{ confirmedName }}</p>
     </section>
   </body>
 </html>
